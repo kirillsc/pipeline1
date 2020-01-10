@@ -19,16 +19,16 @@ where
 {{
     this.config({
         "materialized" : "table",
-        "bucket" : "cdh-ordersdataset-337430",
-        "prefix" : "filteredinsurances",
+        "bucket" : "cdh-banktransactions-337430",
+        "prefix" : "filteredtransactions",
         "schema"  : "my glue schema",
-        "tablename" : "mynewtable" 
+        "tablename" : "fltr" 
     })
 }}
 
 select 
     * 
 from 
-    ORDERSDATASET.insuranceraw
+    "banktransactions"."atmraw"
 where 
-    policyid > 200000 
+    trans_id > 200000 
