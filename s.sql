@@ -20,8 +20,8 @@ where
     this.config({
         "materialized" : "table",
         "bucket" : "cdh-banktransactions-337430",
-        "prefix" : "filteredtransactions",
-        "schema"  : "my glue schema",
+        "prefix" : "atm",
+        "schema"  : "atmnew",
         "tablename" : "fltr" 
     })
 }}
