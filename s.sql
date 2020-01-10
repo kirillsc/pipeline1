@@ -29,6 +29,6 @@ where
 select 
     * 
 from 
-    "banktransactions"."atmraw"
+    banktransactions.atmraw
 where 
     trans_id > 200000 
