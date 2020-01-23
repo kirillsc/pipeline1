@@ -1,34 +1,17 @@
-/*{{
-    this.config({
-        "materialized" : "table",
-        "bucket" : "my-s3-bucket",
-        "prefix" : "s3.prefix ",
-        "schema"  : "my glue schema",
-        "tablename" : "mynewtable" 
-    })
-}}
-
-select 
-    * 
-from 
-    kb-datasource1.kb_dataset_1raw
-where 
-    cbgid > 170438465112 
-*/
 
 {{
     this.config({
         "materialized" : "table",
-        "bucket" : "cdh-banktransactions-337430",
-        "prefix" : "atm",
-        "schema"  : "atmnew",
-        "tablename" : "fltr" 
+        "bucket" : "cdh-pipelinessource-337430",
+        "prefix" : "filtered",
+        "schema"  : "fltrloan",
+        "tablename" : "fltrloan" 
     })
 }}
 
 select 
     * 
 from 
-    banktransactions.atmraw
+    pipelinessource.loansraw
 where 
-    trans_id > 200000 
+    emp_length_int < 5.0 
