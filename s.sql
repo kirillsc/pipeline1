@@ -4,7 +4,7 @@
         "materialized" : "table",
         "bucket" : "cdh-pipelinessource-337430",
         "prefix" : "filtered",
-        "schema"  : "fltrloan",
+        "schema"  : "pipelinessource",
         "tablename" : "fltrloan" 
     })
 }}
