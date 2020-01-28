@@ -3,7 +3,7 @@
     this.config({
         "materialized" : "table",
         "bucket" : "cdh-pipelinessource-337430",
-        "prefix" : "filtered22",
+        "prefix" : "loans/filteredOK",
         "schema"  : "pipelinessource",
         "tablename" : "fltrloan" 
     })
