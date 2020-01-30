@@ -2,16 +2,16 @@
 {{
     this.config({
         "materialized" : "table",
-        "bucket" : "cdh-pipelinessource-337430",
-        "prefix" : "loans/filteredOK",
+        "bucket" : "cdh-pipelinesdatasource-337430",
+        "prefix" : "pipeloans/pipeloansHIGH",
         "schema"  : "pipelinessource",
-        "tablename" : "fltrloan" 
+        "tablename" : "pipeloansHIGH" 
     })
 }}
 
 select 
     * 
 from 
-    pipelinessource.loansraw
+    pipelinesdatasource.pipeloansraw
 where 
-    emp_length_int < 5.0 
+    interest_rate > 20.0 
